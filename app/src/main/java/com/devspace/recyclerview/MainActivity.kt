@@ -36,6 +36,9 @@ class MainActivity : AppCompatActivity() {
 
         ivList.setOnClickListener {
             rvlist.layoutManager = LinearLayoutManager(this)
+        }
+
+        adapter.setOnClickListener { contact ->
 
         }
     }

@@ -22,7 +22,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:textColor="@color/black"
+        android:textColor="@color/graymid"
         android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -53,7 +53,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iv_image"
         app:srcCompat="@drawable/baseline_auto_delete_24"
-        app:tint="@android:color/holo_red_dark" />
+        app:tint="@color/softred" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/vertical_guideline"
@@ -73,17 +73,19 @@
         app:layout_constraintStart_toStartOf="@+id/vertical_guideline"
         app:layout_constraintTop_toBottomOf="@+id/iv_image"
         app:srcCompat="@drawable/baseline_phone_enabled_24"
-        app:tint="@android:color/holo_green_dark" />
+        app:tint="@color/softgreen" />
 
     <TextView
         android:id="@+id/btn_message"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
+        android:layout_marginTop="12dp"
         android:text="Send Message"
-        android:textColor="@color/blue"
+        android:textColor="@color/softblue"
         android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@+id/btn_delete" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_delete"
+        tools:layout_editor_absoluteX="16dp" />
 
     <TextView
         android:id="@+id/btn_Share"
@@ -91,7 +93,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:text="Shere Contact"
-        android:textColor="@color/blue"
+        android:textColor="@color/softblue"
         android:textSize="18sp"
         app:layout_constraintTop_toBottomOf="@+id/btn_message" />
 

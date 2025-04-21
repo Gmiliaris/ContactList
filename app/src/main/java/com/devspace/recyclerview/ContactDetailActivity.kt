@@ -1,5 +1,6 @@
 package com.devspace.recyclerview
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
@@ -21,6 +22,7 @@ class ContactDetailActivity : AppCompatActivity() {
         val tvName = findViewById<TextView>(R.id.tv_name)
         val tvPhone = findViewById<TextView>(R.id.tv_phone)
         val image = findViewById<ImageView>(R.id.iv_image)
+        val tvShare = findViewById<TextView>(R.id.btn_Share)
 
 
         val name = intent.getStringExtra("name")
@@ -30,5 +32,17 @@ class ContactDetailActivity : AppCompatActivity() {
         tvName.text = name
         tvPhone.text = phone
         image.setImageResource(icon)
+
+        tvShare.setOnClickListener {
+
+            val sendIntent: Intent = Intent().apply {
+                action = Intent.ACTION_SEND
+                putExtra(Intent.EXTRA_TEXT, "Name: $name\nPhone: $phone")
+                type = "text/plain"
+            }
+
+            val shareIntent = Intent.createChooser(sendIntent, null)
+            startActivity(shareIntent)
+        }
     }
 }
